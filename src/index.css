@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 180 15% 95%;
+    --foreground: 180 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 30% 10%;
+
+    --primary: 174 40% 20%;
+    --primary-foreground: 45 80% 95%;
+
+    --secondary: 45 70% 55%;
+    --secondary-foreground: 180 30% 10%;
+
+    --muted: 180 10% 90%;
+    --muted-foreground: 180 10% 40%;
+
+    --accent: 45 70% 55%;
+    --accent-foreground: 180 30% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 10% 85%;
+    --input: 180 10% 85%;
+    --ring: 174 40% 20%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 174 40% 15%;
+    --sidebar-foreground: 180 10% 90%;
+    --sidebar-primary: 45 70% 55%;
+    --sidebar-primary-foreground: 180 30% 10%;
+    --sidebar-accent: 174 35% 25%;
+    --sidebar-accent-foreground: 180 10% 90%;
+    --sidebar-border: 174 30% 25%;
+    --sidebar-ring: 45 70% 55%;
+
+    /* Custom tokens */
+    --teal-dark: 174 45% 12%;
+    --teal-mid: 174 40% 20%;
+    --teal-light: 174 30% 35%;
+    --gold: 40 75% 55%;
+    --gold-light: 42 80% 70%;
+    --cream: 40 30% 96%;
+  }
+
+  .dark {
+    --background: 174 45% 8%;
+    --foreground: 180 10% 95%;
+    --card: 174 40% 12%;
+    --card-foreground: 180 10% 95%;
+    --popover: 174 40% 12%;
+    --popover-foreground: 180 10% 95%;
+    --primary: 45 70% 55%;
+    --primary-foreground: 174 45% 8%;
+    --secondary: 174 30% 20%;
+    --secondary-foreground: 180 10% 95%;
+    --muted: 174 30% 15%;
+    --muted-foreground: 180 10% 60%;
+    --accent: 45 70% 55%;
+    --accent-foreground: 174 45% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 174 30% 20%;
+    --input: 174 30% 20%;
+    --ring: 45 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-16 md:px-12 lg:px-20 lg:py-24;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-teal-dark/90 via-teal-dark/70 to-teal-dark/90;
+  }
+
+  .service-card {
+    @apply relative overflow-hidden rounded-xl bg-primary/90 p-8 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-teal-light/20;
+  }
+
+  .service-card:hover {
+    @apply border-gold/40;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight;
+  }
+
+  .gold-accent {
+    @apply text-secondary;
+  }
+
+  .page-hero {
+    @apply relative min-h-[50vh] flex items-center justify-center overflow-hidden;
+  }
+
+  .content-section {
+    @apply py-16 md:py-24;
+  }
+}
