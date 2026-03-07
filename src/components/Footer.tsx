@@ -37,13 +37,13 @@ const Footer = () => {
             <p className="text-cream/60 text-sm">Contact us to discuss your project</p>
             <div className="flex flex-wrap items-center gap-6 text-sm text-cream/70">
               <a href="mailto:info@fusionloop.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
-                <Mail className="h-4 w-4" /> info@fusionloop.com
+                <Mail className="h-4 w-4" /> info@fusionloop.org
               </a>
               <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-secondary transition-colors">
                 <Phone className="h-4 w-4" /> +234 (904) 233-5945
               </a>
               <a href="https://www.fusionloop.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
-                <Globe className="h-4 w-4" /> www.fusionloop.com
+                <Globe className="h-4 w-4" /> www.fusionloop.org
               </a>
             </div>
           </div>
